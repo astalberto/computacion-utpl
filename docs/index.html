@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Malla Curricular — Computación UTPL</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <!-- <img src="https://utpl.edu.ec/recursos/img/utpl_logo1.png" alt="UTPL" class="utpl-logo">-->
+        <div class="utpl-badge">UTPL &middot; Modalidad Presencial</div>
+        <h1>Carrera de Computación</h1>
+        <p class="subtitle">Malla Curricular Interactiva &mdash; haz hover para ver prerrequisitos, click para detalles
+        </p>
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-value" id="s-creditos">0</div>
+                <div class="stat-label">Créditos</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" id="s-materias">0</div>
+                <div class="stat-label">Materias</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" id="s-ciclos">0</div>
+                <div class="stat-label">Ciclos</div>
+            </div>
+            <div class="stat">
+                <div class="stat-value" id="s-horas">0</div>
+                <div class="stat-label">Horas</div>
+            </div>
+        </div>
+    </header>
+
+    <!-- LEGEND -->
+    <div class="legend" id="legend"></div>
+
+    <!-- CURRICULUM GRID -->
+    <div class="grid-section">
+        <div class="cycle-grid" id="cycle-grid"></div>
+    </div>
+
+    <!-- IMPORTANTE + ITINERARIOS -->
+    <section class="bottom-section">
+
+        <div class="importante-card">
+            <div class="importante-title">
+                <span class="importante-icon">!</span>
+                Importante
+            </div>
+            <ul class="importante-list">
+                <li>
+                    <span class="importante-num">1</span>
+                    <span>Como requisito de titulación, el estudiante debe demostrar suficiencia en el manejo de una
+                        lengua extranjera en el nivel B1 del Marco Común Europeo.</span>
+                </li>
+                <li>
+                    <span class="importante-num">2</span>
+                    <span>El estudiante debe cursar y aprobar uno de los dos itinerarios ofertados por la carrera.</span>
+                </li>
+                <li>
+                    <span class="importante-num">3</span>
+                    <span>La malla curricular está organizada con pre-requisitos.</span>
+                </li>
+            </ul>
+        </div>
+
+        <div id="itinerary-grid"></div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        Universidad Técnica Particular de Loja &mdash; <span>Carrera de Computación</span> &mdash; Modalidad Presencial
+    </footer>
+
+    <!-- MODAL -->
+    <div class="modal-overlay" id="modal-overlay" onclick="closeModal(event)">
+        <div class="modal" id="modal">
+            <button class="modal-close" onclick="closeModal(null, true)">&#x2715;</button>
+            <div class="modal-cat-strip" id="modal-strip"></div>
+            <div class="modal-name" id="modal-name"></div>
+            <div id="modal-body"></div>
+        </div>
+    </div>
+
+    <script src="js/data.js"></script>
+    <script src="js/counters.js"></script>
+    <script src="js/ui.js"></script>
+    <script src="js/interactions.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
